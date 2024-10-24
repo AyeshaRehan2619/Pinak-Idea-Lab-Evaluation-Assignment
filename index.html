@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <style>
+        .service-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .background {
+            height: 100vh;
+            background: linear-gradient(145deg, #6c4e9c 55%, #EDEDED 55%);
+            position: relative;
+        }
+    </style>
+</head>
+
+   <div id="assignment">
+    <div class="background">
+    <section class= "text-white  py-16">
+        <div class="max-w-7xl mx-auto text-left">
+            <h2 class="text-4xl font-serif font-bold mb-8">OUR SERVICES</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                
+                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 text-center service-card" data-id="1">
+                    <div class="icon mb-4">
+                        <img  src="./icon1.jpg" alt="Emergency Plumbing Icon" class="h-20 w-20 rounded-full border-4 border-purple-500 ml-20 mx-auto">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Emergency Plumbing Services</h3>
+                    <p class="mb-4">Our plumbers are ready to go 24/7 for emergencies – including nights, weekends and holidays.</p>
+                    <a href="#" class="text-indigo-700 font-serif font-extrabold">EXPLORE THIS SERVICE ></a>
+                </div>
+
+                
+                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 text-center service-card" data-id="2">
+                    <div class="icon mb-4">
+                        <img src="./icon2.jpg" alt="Plumbing and Drains Icon" class="h-20 w-20 rounded-full border-4 border-purple-500 ml-20 mx-auto">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Plumbing and Drains</h3>
+                    <p class="mb-4">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+                    <a href="#" class="text-indigo-700 font-serif font-extrabold">EXPLORE THIS SERVICE ></a>
+                </div>
+
+                
+                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 text-center service-card" data-id="3">
+                    <div class="icon mb-4">
+                        <img src="./icon3.jpg" alt="Water Damage Icon" class="h-20 w-20 rounded-full border-4 border-purple-500 ml-20 mx-auto">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Water Damage</h3>
+                    <p class="mb-4">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+                    <a href="#" class="text-indigo-700 font-serif font-extrabold">EXPLORE THIS SERVICE ></a>
+                </div>
+
+               
+                <div class="bg-white text-gray-900 rounded-lg shadow-lg p-6 text-center service-card" data-id="4">
+                    <div class="icon mb-4">
+                        <img src="./icon4.jpg" alt="Water Heaters Icon" class="h-20 w-20 ml-20 rounded-full border-4 border-purple-500 mx-auto">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Water Heaters</h3>
+                    <p class="mb-4">Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters.</p>
+                    <a href="#" class="text-indigo-700 font-serif font-extrabold">EXPLORE THIS SERVICE ></a>
+                </div>
+            </div>
+        </div>
+        </section>
+    </section>
+
+    <script>
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                anime({
+                    targets: card,
+                    rotateY: '360deg',
+                    duration: 1000,
+                    easing: 'easeInOutQuad'
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                anime({
+                    targets: card,
+                    rotateY: '0deg',
+                    duration: 1000,
+                    easing: 'easeInOutQuad'
+                });
+            });
+        });
+    </script>
+    </div>
+</body>
+</html>
